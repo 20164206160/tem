@@ -1,0 +1,30 @@
+#container {
+    margin: 10px 50px;
+    display: block;
+}
+.slider {
+    position:relative;
+    z-index:1;
+    width:960px;
+    margin: 0px auto;
+    height:660px;
+    overflow:hidden;
+}
+.slider .items {
+    height:600px;
+    display:none;
+}
+.pic {
+    position:relative;
+}
+.pagination {
+    display: block;
+    position: absolute;
+    align-content: center;
+    align-items: center;
+    bottom: 0px;
+    left: 250px;
+}
+.pagination li {
+    align-content: center;
+}
