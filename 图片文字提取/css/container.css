@@ -5,13 +5,13 @@
 .slider {
     position:relative;
     z-index:1;
-    width:960px;
+    width:800px;
     margin: 0px auto;
-    height:660px;
+    height:360px;
     overflow:hidden;
 }
 .slider .items {
-    height:600px;
+    height:300px;
     display:none;
 }
 .pic {
@@ -23,7 +23,7 @@
     align-content: center;
     align-items: center;
     bottom: 0px;
-    left: 250px;
+    left: 180px;
 }
 .pagination li {
     align-content: center;

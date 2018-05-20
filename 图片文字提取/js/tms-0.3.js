@@ -63,10 +63,12 @@
 				.load(function(){
 					_.pic
 						.css({
-							width:_.width=img.width(),
-							height:_.height=img.height(),
-							background:'url('+_.itms[_.show]+') 0 0 no-repeat'
+/*此处改高宽*/
+							width:_.width=800,
+							height:_.height=300,
+							background:'url('+_.itms[_.show]+') 0 0 no-repeat',
 						})
+					$('.pic').css('background-size','800px 300px')
 					img.remove()
 					_.current=_.buff=_.show
 				})
@@ -109,6 +111,8 @@
 							 backgroundPosition:'-'+x*eW+'px -'+y*eH+'px',
 							 display:'none'
 						 })
+			$('.mask').css('background-size','800px 300px')
+			$('.mask div').css('background-size','800px 300px')
 			_.maskC=_.mask.children()
 			
 		},

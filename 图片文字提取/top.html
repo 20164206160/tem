@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/top.css"/>
+    <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 </head>
 <body>
     <div id="top">
+        <img src="img/top_black.png" alt="置顶"/>
     </div>
+    <script>
+        $("#top").mouseover(function(){
+            $('#top img').attr('src','img/top.png');
+        });
+        $("#top").mouseout(function(){
+            $('#top img').attr('src','img/top_black.png');
+        });
+        $('#top').click(function(){
+            $("html,body").animate({scrollTop:0}, 300);
+        });
+    </script>
 </body>
 </html>
