@@ -328,17 +328,6 @@
 						_.startSlShFu(_.prog)
 					})
 		},
-		bannersFu:function(){
-			var _=this
-			if(_.banners===false)
-				return false
-			_.banners=[]
-			$(_.items,_.me).each(function(i){
-				var tmp
-				_.banners[i]=(tmp=$('.'+_.bannerCl,this)).length?tmp:false
-			})
-			_.bannerShow(_.banner=_.banners[_.show].appendTo(_.me))
-		},
 		numStatusChFu:function(){
 			var _=this
 			_.numSt.html('<span class="curr"></span>/<span class="total"></span>')
@@ -368,7 +357,6 @@
 			_.slideshowFu()
 			_.progressBarFu()
 			_.pauseOnHoverFu()
-			_.bannersFu()
 			_.numStatusFu()
 		},
 		afterAnimation:function(){},
