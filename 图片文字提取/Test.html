@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" media="all" href="css/fileinput.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/top.css"/>
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  type="text/css" href="css/Test.css">
     <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/fileinput.min.js"></script>
     <script type="text/javascript" src="js/theme.js"></script>
@@ -14,19 +18,83 @@
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="htmleaf-container">
-        <div class="container kv-main">
-            <div class="row">
-                <div class="col-lg-2"></div>
-
-                <div class="col-lg-9">
-                    <form id="form" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <input id="files" name="files" class="file-loading"  type="file" multiple data-show-caption="true"/>
-                        </div>
-                    </form>
+    <div id="main">
+        <!--导航栏-->
+        <div id="nav">
+            <div id="nav-container">
+                <!--logo-->
+                <div id="logo">
+                    <a href="" target="_blank"><img src="img/logo.jpg" alt="logo" ></a>
+                </div>
+                <div id="nav-chooser">
+                    <div id="nav-header">
+                        <ul>
+                            <li>
+                                <a href="index.html" target="_self">首页</a>
+                            </li>
+                            <li>
+                                <a href="index.html" target="_self">介绍</a>
+                            </li>
+                            <li>
+                                <a href="Test.html" target="_self">在线预览</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="nav-login">
+                        <a href="login.html" target="_self">登录</a>
+                    </div>
+                    <div id="nav-register">
+                        <a href="" target="_self">注册</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="container">
+            <div id="start">
+                <div class="htmleaf-container">
+                    <div class="container kv-main">
+                        <div class="row">
+                            <div class="col-lg-11" style="margin: 0px auto;">
+                                <form id="form" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <input id="files" name="files" class="file-loading"  type="file" multiple data-show-caption="true"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="result">
+                <div class="col-lg-11" style="margin: 0px auto;">
+                    <div class="file-input theme-fa">
+                        <div class="file-preview">
+                            <button class="close closeself" type="button" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <div class=" file-drop-zone">
+                                <div class="file-drop-zone-title">
+                                    图片识别结果
+                                    <br>
+                                    支持 导出 execl
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--界面置顶-->
+        <div id="top">
+            <img src="img/top_black.png" alt="置顶"/>
+        </div>
+        <!--尾页-->
+        <div id="footer">
+            © 版权
+            <a href="#">SmallBang文字提取</a>
+            by
+            <a href="#">SmallBang小队</a>
         </div>
     </div>
 </body>
@@ -94,6 +162,15 @@
         });
         $(formGropId).on('fileerror', function(event, data, msg) {  //一个文件上传失败
             console.log('文件上传失败！' + msg);
+        });
+        $("#top").mouseover(function(){
+            $('#top img').attr('src','img/top.png');
+        });
+        $("#top").mouseout(function(){
+            $('#top img').attr('src','img/top_black.png');
+        });
+        $('#top').click(function(){
+            $("html,body").animate({scrollTop:0}, 300);
         });
     }
 </script>
